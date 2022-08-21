@@ -12,7 +12,7 @@ fun sum(list: List<Int>): Int {
 
 fun main() {
     while (true) {
-        val inputLine = readln()
+        var inputLine = readln()
         when (inputLine) {
             "" -> continue
             "/exit" -> {
@@ -25,6 +25,11 @@ fun main() {
             }
 
             else -> {
+                inputLine=inputLine.filterNot {it == ' '}.replace("+"," ").replace("--"," ").replace("-"," -")
+                while (inputLine.replace("  "," ")!=inputLine){
+                    inputLine=inputLine.replace("  "," ")
+                }
+                inputLine=inputLine.trim()
                 val list: List<Int> = (inputLine.split(" ").map { it.toInt() })
                 println(sum(list))
             }
