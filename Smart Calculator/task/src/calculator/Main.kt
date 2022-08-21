@@ -4,28 +4,29 @@ package calculator
  * @param a [Int]: first integer
  * @param b [Int]: second integer
  * @exception NumberFormatException if input is wrong
- * @return sum of two integers : a+b
+ * @return sum of [List] integers
  */
-fun sum(a: Int, b: Int): Int {
-    return a + b
+fun sum(list: List<Int>): Int {
+    return list.sum()
 }
 
 fun main() {
-    while (true){
+    while (true) {
         val inputLine = readln()
-        when (inputLine){
+        when (inputLine) {
             "" -> continue
             "/exit" -> {
                 println("Bye!")
                 return
             }
-            else ->{
-                val list = inputLine.split(" ").map { it.toInt() }
-                if (list.size==1){
-                    println(list[0])
-                }
-                else
-                    println(sum(list[0],list[1]))
+
+            "/help" -> {
+                println("The program calculates the sum of numbers")
+            }
+
+            else -> {
+                val list: List<Int> = (inputLine.split(" ").map { it.toInt() })
+                println(sum(list))
             }
         }
     }
