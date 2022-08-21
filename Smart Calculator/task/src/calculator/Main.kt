@@ -11,6 +11,22 @@ fun sum(a: Int, b: Int): Int {
 }
 
 fun main() {
-    val (a, b) = readln().split(" ").map { it.toInt() }
-    println(sum(a, b))
+    while (true){
+        val inputLine = readln()
+        when (inputLine){
+            "" -> continue
+            "/exit" -> {
+                println("Bye!")
+                return
+            }
+            else ->{
+                val list = inputLine.split(" ").map { it.toInt() }
+                if (list.size==1){
+                    println(list[0])
+                }
+                else
+                    println(sum(list[0],list[1]))
+            }
+        }
+    }
 }
