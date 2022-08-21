@@ -5,11 +5,13 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Smart Calculator/task" />
             <option value="$PROJECT_DIR$/Topics/Nested and inner classes/Busy internship" />
             <option value="$PROJECT_DIR$/Topics/Nested and inner classes/Heroes and villains" />
             <option value="$PROJECT_DIR$/Topics/Nested and inner classes/Nested or inner" />
